@@ -51,16 +51,30 @@ While Zephyr is conceived of as a beginners' programming langauge, the current i
 - The user dependency on Python should be removed by packaging Zephyr as an executable.
 - Zephyr should come with an IDE.
 
-Installation and use - Windows
+Installation and use (Windows)
 ------------------------------
 
 1. Install Python 3.x ([python.org](http://python.org/downloads)).
 2. `git clone` a local copy of this repository.
-3. The Zephyr interpreter is zephyr.py. Pass your Zephyr program's name to it as a command-line argument. Alternately, you can edit the defaultFile variable and run zephyr.py without arguments.
+3. The Zephyr interpreter is zephyr.py. Pass your Zephyr program's name to it as a command-line argument. Alternately, you can edit the `defaultFile` variable and run zephyr.py without arguments.
 
 **Example:**
 
-Suppose the Zephyr implementation files are in C:\Zephyr. To run the Hello World program, navigate to that directory and execute `python zephyr.py Programs\helloWorld.zeph`.
+To run the Hello World program, navigate to the Zephyr directory in the command prompt and execute `python zephyr.py Programs\helloWorld.zeph`.
+
+(Tested on Windows XP and 7.)
+
+Installation and use (Linux)
+------------------------------
+
+1. `git clone` a local copy of this repository.
+2. The Zephyr interpreter is zephyr.py. Pass your Zephyr program's name to it as a command-line argument. Alternately, you can edit the `defaultFile` variable and run zephyr.py without arguments.
+
+**Example:**
+
+To run the Hello World program, navigate to the Zephyr directory and execute `python3 zephyr.py Programs/helloWorld.zeph`.
+
+(Tested on Ubuntu 12.04.)
 
 History
 -------
