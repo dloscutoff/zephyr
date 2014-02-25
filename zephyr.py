@@ -6,7 +6,7 @@ from Execution import runProgram
 from Utilities import processCmdLineArgs
 import sys
 
-defaultFile = "Programs/10print.zeph"
+defaultFile = "Programs/helloWorld.zeph"
 defaultDebug = False
 
 if __name__ == "__main__":

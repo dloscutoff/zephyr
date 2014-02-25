@@ -1,0 +1,8 @@
+
+`#-
+	The much-anticipated "Hello world" program.
+-#`
+
+print "Hello world!"
+
+# Nothing to it, really.

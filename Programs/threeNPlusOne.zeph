@@ -1,0 +1,34 @@
+`#-
+    Queries the user for a value and then prints its orbit under the 3n+1 function.
+    See http://en.wikipedia.org/wiki/Collatz_conjecture.
+-#`
+
+print "The 3n+1 Function"
+set again to true
+
+while again
+	print
+	print "Enter start value"
+	input n as Integer
+
+	while n > 1
+		if ( n mod 2 ) = 0
+			# n is even; halve it
+			set n to n / 2
+		else
+			# n is odd; set it to 3n+1
+			set n to ( 3 * n ) + 1
+		end if
+		print n
+	repeat
+
+	if n = 1
+		print "Run again (yes/no)?"...
+		input again as Boolean
+	else
+		print "Please choose a positive number."
+		set again to true
+	end if
+repeat
+
+print

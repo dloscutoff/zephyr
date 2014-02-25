@@ -1,0 +1,52 @@
+
+`#-
+	Sieve of Eratosthenes
+	Finds and displays all prime numbers from 2 through the given maximum.
+-#`
+
+print "Sieve of Eratosthenes: prime numbers from 2 through N"
+print "What is the maximum number N?"...
+input maximum as Integer
+print "How many numbers do you want on a line?"...
+input lineSize as Integer
+
+# Create Array to hold numbers
+# Note that numbers[1] will go unused, since 1 is not a prime number.
+set numbers to Array( maximum )
+
+# Initialize array to all trues
+for i from 2 to maximum
+	set numbers[i] to true
+next
+
+# Go through each prime factor and set its multiples' entries to false
+for factor from 2 to maximum
+	if numbers[factor] = true
+		# factor is a prime
+		set multiple to 2
+		while ( factor * multiple ) <= maximum
+			set numbers[ factor * multiple ] to false
+			inc multiple
+		repeat
+	end if
+next
+
+# Output the results
+set numSoFar to 0
+for i from 2 to maximum
+	if numbers[i] = true
+		# i is a prime; print it
+		inc numSoFar
+		if numSoFar < lineSize
+			print i...
+		else
+			print i
+			set numSoFar to 0
+		end if
+	end if
+next
+
+# If we need a newline at the end, print it
+if numSoFar \= 0
+	print
+end if

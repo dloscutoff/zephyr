@@ -1,0 +1,36 @@
+
+`#-
+	Program to pick a name out of a hat.
+-#`
+
+set max_num to 50
+
+print "Enter up to", max_num, "names for the hat (empty string to stop)."
+
+set hat to Array( max_num )
+set num to 0
+set done to false
+
+while not done
+	print ( num + 1 ) + ":" ...
+	input name
+	if name = ""
+		set done to true
+	else
+		# Add the name to the hat
+		inc num
+		set hat[num] to name
+		if num = max_num
+			set done to true
+		end if
+	end if
+repeat
+
+set again to true
+while again
+	set index to Integer( num * random ) + 1
+	print "The hat has chosen", hat[index] + "."
+	print "Choose again (y/n)?" ...
+	input again as Boolean
+repeat
+
