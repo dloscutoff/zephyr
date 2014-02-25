@@ -1,0 +1,15 @@
+# Symbols are ( ) [ ] , ; : ...
+Symbol        ::= \(|\)|\[|\]|,|;|:|\.\.\.
+# Operators are + - * / mod <= >= = < > \= | || and or not
+Operator      ::= \+|-|\*|/|mod|<=|>=|=|<|>|\\=|[|][|]?|and|or|not
+EOL           ::= \n\r?|\r\n?
+Keyword       ::= as|else|end|for|from|if|inc|input|next|print|random|repeat|set|to|while
+Name          ::= _*[A-Za-z][A-Za-z_0-9]*
+Integer       ::= 0|[1-9][0-9]*
+Boolean       ::= true|false
+Character     ::= '.'
+String        ::= "[^"]*"
+Space         ::= ( |\t|\\\n)+
+SingleComment ::= (#|#[^\-][^\n\r]*)\r?$
+MultiComment  ::= `?#-[^\-]*-(-|[^\-#][^-]*-)*#`?
+Unknown       ::= .
