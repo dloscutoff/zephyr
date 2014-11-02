@@ -79,7 +79,7 @@ To run the Hello World program, navigate to the Zephyr directory and execute `py
 History
 -------
 
-Zephyr was created by [David Loscutoff](mailto:dloscutoff@gmail.com) in 2010 for his Senior Thesis as a Computer Science undergrad at the Uiversity of Nebraska at Omaha.
+Zephyr was created by David Loscutoff in 2010 for his Senior Thesis as a Computer Science undergrad at the University of Nebraska at Omaha.
 
 License
 -------
